@@ -1,11 +1,13 @@
-- name: play with variables
+- name : play with variables
   hosts: local
   connection: local
-  vars:
-    number: 78
-
+  become: yes
   tasks:
-    - name: If the number is less than 100
-      ansible.builtin.debug:
-        msg: "Given number is {{ number }}"
-      when: number < 100
+  - name: install packages
+    ansible.builtin.package:
+    name: "{{item.name}}"
+    state: "{{item.state}}"
+  loop:
+   - {name : 'nginx', state: 'present'}
+   - {name : 'mysql', state: 'absent'}
+   - {name : 'mysql', state: 'absent'}
