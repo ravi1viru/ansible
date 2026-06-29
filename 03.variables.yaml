@@ -1,11 +1,19 @@
 - name : play with variables
   hosts: local
   connection: local
-  vars_prompt:
-   - name : USERNAME
-     prompt : enter the USERNAME
-     private : true
+  vars:
+    Duration: 10HR
+    Course: "Devops woth aws"
+    IS_LIVE: true
+    Toools:
+     - linux
+     - shell
+     - Ansibles
+    Concepts:
+      CI: jenkins
+      Scipting : "Shell , ansiblee , Terraform"
+
   tasks:
-   - name : print course information
+   - name : couses information
      ansible.builtin.debug:
-      msg: "Hello {{USERNAME}}"
+      msg: "Tools are {{Toools}}, Concepts are {{Concepts}}"
