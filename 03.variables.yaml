@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_prompt:
-   course : USERNAME
+    - name : USERNAME
    Prompt : enter the USERNAME
    private : true
   tasks:
