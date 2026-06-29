@@ -2,18 +2,10 @@
   hosts: local
   connection: local
   vars:
-    Duration: 10HR
-    Course: "Devops woth aws"
-    IS_LIVE: true
-    Toools:
-     - linux
-     - shell
-     - Ansibles
-    Concepts:
-      CI: jenkins
-      Scipting : "Shell , ansiblee , Terraform"
+    Number : 78
 
   tasks:
-   - name : couses information
+   - name : if the number is lessthan 100
      ansible.builtin.debug:
-      msg: "Tools are {{Toools}}, Concepts are {{Concepts}}"
+      msg: "Given number is {{Number}}"
+     When:Number < 100 
