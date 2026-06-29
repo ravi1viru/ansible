@@ -3,8 +3,8 @@
   connection: local
   vars_prompt:
     - name : USERNAME
-   Prompt : enter the USERNAME
-   private : true
+      Prompt : enter the USERNAME
+      private : true
   tasks:
   - name : print course information
     ansible.builtin.debug:
