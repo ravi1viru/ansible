@@ -2,10 +2,10 @@
   hosts: local
   connection: local
   vars_prompt:
-    - name : USERNAME
-      Prompt : enter the USERNAME
-      private : true
+   - name : USERNAME
+     Prompt : enter the USERNAME
+     private : true
   tasks:
-  - name : print course information
-    ansible.builtin.debug:
+   - name : print course information
+     ansible.builtin.debug:
      msg: "Hello {{USERNAME}} "
