@@ -2,7 +2,7 @@
   hosts : frontend
   connections : local
   becomes : yes
-  tasks
+  tasks :
    - name : install nginx server
      ansible.builtin.package:
       name : nginx
