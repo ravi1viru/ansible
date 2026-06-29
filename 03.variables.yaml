@@ -8,4 +8,4 @@
    - name : if the number is lessthan 100
      ansible.builtin.debug:
       msg: "Given number is {{Number}}"
-     When:Number < 100  
+     when:Number < 100
