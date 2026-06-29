@@ -1,11 +1,11 @@
 - name : play with variables
   hosts: local
   connection: local
-  vars:
-   course : ansible
-   duration : 10HR
-   trainer : sivaumar
+  vars_prompt:
+   course : USERNAME
+   Prompt : enter the USERNAME
+   private : true
   tasks:
   - name : print course information
     ansible.builtin.debug:
-     msg: "Hello {{course}}, course duration of {{duration}}, trainer {{trainer}}"
+     msg: "Hello {{USERNAME}} "
