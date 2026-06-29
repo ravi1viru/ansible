@@ -1,9 +1,10 @@
-- name : nginx install in run
-  hosts : frontend
-  connections : local
-  becomes : yes
-  tasks :
-   - name : install nginx server
-     ansible.builtin.package:
-      name : nginx
-      state : present
+- name: Install nginx
+  hosts: frontend
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Install nginx server
+      ansible.builtin.package:
+        name: nginx
+        state: present
