@@ -1,11 +1,11 @@
-- name : play with variables
+- name: play with variables
   hosts: local
   connection: local
   vars:
-  number: 78
+    number: 78
 
   tasks:
-  - name: If the number is less than 100
-    ansible.builtin.debug:
-      msg: "Given number is {{ number }}"
-    when: number < 100
+    - name: If the number is less than 100
+      ansible.builtin.debug:
+        msg: "Given number is {{ number }}"
+      when: number < 100
