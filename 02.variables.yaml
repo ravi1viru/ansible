@@ -1,0 +1,11 @@
+- name: play with variables
+  hosts: local
+  become: yes
+  vars:
+   course: ansible
+   duration: 10hr
+   traier: raveendera
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+     msg: "Hello {{ course }}, course duration {{ duration }}, course trainer {{ trainer }}" 
