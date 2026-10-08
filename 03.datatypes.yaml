@@ -1,0 +1,18 @@
+- name: play with datatypes
+  hosts: local
+  become: yes
+  vars:
+   Duration: 120
+   course: "devsec with aws"
+   IS_LIVE: true
+   Tools:
+   - linux
+   - shell
+   - ansible 
+   concepts:
+    CI: jenkins
+    scripting: "shell,ansible,terraform,python"
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+     msg: "course is {{ course }}, durationis {{ Duration }}, is live {{ IS_LIVE}}, tols are {{ Tools }}, concepts are {{ course }}"
