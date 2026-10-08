@@ -8,4 +8,11 @@
   tasks:
   - name: print the variables
     ansible.builtin.debug:
+     msg: "Hello {{ course }}, course duration {{ duration }}, course trainer {{ traier }}"
+
+  tasks:
+  - name: print the variables
+    vars:
+     course: shell script
+    ansible.builtin.debug:
      msg: "Hello {{ course }}, course duration {{ duration }}, course trainer {{ traier }}" 
